@@ -1,0 +1,151 @@
+*{
+    /* outline: 1px dotted #333; */
+}
+
+:root{
+    --navBg: #141414;
+    --lightBg: #f5f5f5;
+    --black: #000;
+    --white: #fff;
+    --lightText: #bdbdbd;
+    --semiLight: #7d7d7d;
+    --logoColor: #6831ff;
+    --gold: #ffd700;
+    --green: #00d600;
+    --red: #ff0000;
+}
+
+html, body, main, section{
+    height: 100%;
+}
+
+body{
+    padding: 1em 7em;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* Global Navigation */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+nav .nav-left a{
+    font-size: 2.3rem;
+}
+
+nav .nav-middle{
+    font-size: 1.6rem;
+}
+
+nav .nav-right{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+nav .nav-right a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25em;
+}
+
+.nav-icon{
+    font-size: 24pt;
+    color: var(--logoColor);
+}
+
+.new-icon{
+    color: var(--green);
+}
+
+.list-icon{
+    color: var(--gold);
+}
+
+/* Global Navigation Ends */
+
+section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3em 0em;
+}
+
+section .product-card{
+    width: 25%;
+    height: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 1em;
+    border: 1px solid var(--lightBg);
+}
+
+.name-price{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-name,
+.product-price{
+    font-weight: bold;
+}
+
+.product-description div:nth-child(1){
+    font-weight: bold;
+}
+
+.product-description div:nth-child(2){
+    color: var(--semiLight);
+}
+
+.cart-name{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+}
+
+.cart-name div:nth-child(1){
+    font-weight: bold;
+}
+
+.edit-delete{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    text-align: center;
+}
+
+.edit-icon{
+    font-size: 1.3rem;
+    color: var(--green);
+}
+
+.delete-icon{
+    font-size: 1.3rem;
+    color: var(--red);
+}
