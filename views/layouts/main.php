@@ -20,7 +20,7 @@
     <title><?= $title ?></title>
 </head>
 
-<body id="<?= $override_id ?? "main" ?>">
+<body class="container" id="<?= $override_id ?? "main" ?>">
     <!-- Simple notification check for errors -->
     <?php if (isset($errors)): ?>
         <div class="alert alert-danger">
@@ -48,10 +48,10 @@
     <?php endif ?>
 
     <!-- Global navigation -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-light rounded sticky-top">
+        <div class="container-fluid"> 
             <a class="navbar-brand" href="<?= ROOT_PATH ?>">
-                The Product Application
+                Shoppers Online
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,6 +60,15 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= ROOT_PATH ?>/pages/index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= ROOT_PATH ?>/pages/about">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= ROOT_PATH ?>/pages/contact">Contact us</a>
+                    </li>
                     <?php if ($auth): ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

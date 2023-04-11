@@ -35,7 +35,7 @@
     }
 
     function redirect ($location, $locals) {
-        if (session_start() === PHP_SESSION_NONE) session_start();
+        if (session_status() === PHP_SESSION_NONE) session_start();
         $_SESSION["locals"] = $locals;
         header("Location: " . ROOT_PATH . "/{$location}");
         die();

@@ -7,11 +7,22 @@
      * a resource. The action is the specific function you want to call.
      */
 
+    /**
+     * "Authentication" is logging in
+     * once you are authenticated, your application can apply authorization
+     * "Authorizations" are another word for permissions (what am I allowed to do)
+     * meaning as a user what am I capable of doing
+     */
+
+     /**
+      * Not changed _new to register as it was already created by you
+      */
+
     $routes = [
         "get" => [
             [
                 "pattern" => "/",
-                "controller" => "ProductsController",
+                "controller" => "PagesController",
                 "action" => "index"
             ],
             [
@@ -63,7 +74,7 @@
                 "pattern" => "/carts/delete/:id",
                 "controller" => "CartsController",
                 "action" => "delete"
-            ],
+            ], //users routess
             [
                 "pattern" => "/users/new",
                 "controller" => "UsersController",
@@ -78,6 +89,21 @@
                 "pattern" => "/logout",
                 "controller" => "UsersController",
                 "action" => "logout"
+            ], // pages routes
+            [
+                "pattern" => "/pages/index",
+                "controller" => "PagesController",
+                "action" => "index"
+            ],
+            [
+                "pattern" => "/pages/about",
+                "controller" => "PagesController",
+                "action" => "about"
+            ],
+            [
+                "pattern" => "/pages/contact",
+                "controller" => "PagesController",
+                "action" => "contact"
             ],
         ],
         "post" => [

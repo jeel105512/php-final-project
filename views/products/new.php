@@ -1,5 +1,5 @@
 <div>
-    <h1>New Product</h1>
+    <h1 class="my-3">New Product</h1>
 
     <?php include_once("products/_form.php") ?>
 </div>

@@ -1,12 +1,12 @@
 <div>
-    <h1>List Products</h1>
+    <h1 class="my-3 text-center">List Products</h1>
     <section>
         <?php if (isset($products) && count($products) > 0): ?>
                 <?php foreach ($products as $product): ?>
                 <div class="product-card">
                     <div class="name-price">
                         <div class="product-name"><?= $product->product_name ?></div>
-                        <div class="product-price"><?= $product->price ?></div>
+                        <div class="product-price">$<?= $product->price ?></div>
                     </div>
                     <div class="product-description">
                         <div>Product Description:</div>

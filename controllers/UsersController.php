@@ -41,6 +41,8 @@
 
             redirect("", ["success" => "You have logged in successfully"]);
         }
+        // 
+        redirect("login", ["errors" => "You must provide an email and password"]);
     }
 
     function logout () {
